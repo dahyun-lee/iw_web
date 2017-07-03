@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>문의하기</title>
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+<div class="container">
+
+<ul class="inquire-tab">
+
+  <li data-tab="tab1" class="current">
+  <div class="tab-icon"><img src="img/online.png" alt="온라인상담"></div>
+    온라인상담</li>
+  <li data-tab="tab2">
+<div class="tab-icon"><img src="img/kakao.png" alt="카톡상담"></div>
+    카톡상담</li>
+  <li data-tab="tab3">
+<div class="tab-icon"><img src="img/reservation.png" alt="온라인예약"></div>
+    온라인예약</li>
+  <li data-tab="tab4">
+<div class="tab-icon"><img src="img/review.png" alt="수술후기"></div>
+    수술후기</li>
+<li data-tab="tab5">
+<div class="tab-icon"><img src="img/event.png" alt="이벤트신청"></div>
+  이벤트신청</li>
+<li data-tab="tab6">
+<div class="tab-icon"><img src="img/story.png" alt="이벤트신청"></div>
+  체험단신청</li>
+<li data-tab="tab7">
+<div class="tab-icon"><img src="img/place.png" alt="오시는길"></div>
+    오시는길</li>
+
+</ul>
+<div class="tabwrap">
+<button class="tab-close">닫기</button>
+<div id="tab1" class="tabcontent current">
+  <h3>About</h3>
+  <!-- <img src="img/ex.jpg" alt=""> -->
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<div id="tab2" class="tabcontent">
+  <h3>Portfolio</h3>
+  <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+</div>
+
+<div id="tab3" class="tabcontent">
+  <h3>Contact</h3>
+  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</div>
+
+<div id="tab4" class="tabcontent">
+  <h3>Travel</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+
+<div id="tab5" class="tabcontent">
+  <h3>Contact</h3>
+  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</div>
+
+<div id="tab6" class="tabcontent">
+  <h3>Travel</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+<div id="tab7" class="tabcontent">
+  <h3>Travel</h3>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</div>
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+  $(function() {
+    $('.inquire-tab li').click(function() {
+      var activeTab = $(this).attr('data-tab');
+      $('.inquire-tab li').removeClass('current');
+      $('.tabcontent').removeClass('current');
+      $(this).addClass('current');
+      $('#' + activeTab).addClass('current');
+      // 스타일1적용시
+      $('.container').addClass('tab-show');
+    })
+  });
+  $(function(){
+    $('.tab-close').click(function(){
+      $('.container').removeClass('tab-show');
+      $('.tabcontent').removeClass('current');
+    })
+  });
+
+</script>
+
+</body>
+</html>

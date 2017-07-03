@@ -1,0 +1,122 @@
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Nanum Barun Gothic', sans-serif;
+
+}
+h3, p{
+  margin:0;
+}
+ul,li{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  /*padding-top: 100px;*/
+  height:100%;
+  position: fixed;
+  /*right:-500px;*/
+  right:0;
+  top:0;
+  transition:0.5s;
+}
+.tabwrap{
+  position: relative;
+}
+.tab-close{
+  background: url('../img/close_white.png') center center;
+  position: absolute;
+  cursor:pointer;
+  border:0;
+  text-indent: -80px;
+  overflow: hidden;
+  top:15px;
+  right:10px;
+  width:40px;
+  height:40px;
+}
+.inquire-tab {
+/*height:100%;*/
+background: rgba(#e4e9eb, 0.75); /* Old browsers */
+background: -moz-linear-gradient(top, #e3e8ea 1%, #acdce0 52%, #e3eaed 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #e3e8ea 1%,#acdce0 52%,#e3eaed 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #e3e8ea 1%,#acdce0 52%,#e3eaed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e8ea', endColorstr='#e3eaed',GradientType=0 ); /* IE6-9 */
+}
+.inquire-tab li {
+  cursor: pointer;
+  width:100px;
+  height:90px;
+  padding:10px;
+  color:#2d3a49;
+  text-align: center;
+  font-size: 14px;
+}
+.tab-icon {
+  background: #2d3a49;
+  width:45px;
+  height:45px;
+  border-radius: 45px;
+  margin: 0 auto;
+  padding:9px;
+  margin-bottom: 5px;
+}
+.tab-icon .current{
+  background: #38b3bb;
+}
+.tab-icon:hover {
+  background: #38b3bb;
+}
+
+.tab-icon img {
+  width:28px;
+  height:28px;
+
+}
+ul.inquire-tab li.current{
+  color: #38b3bb;
+
+}
+li.current .tab-icon{
+background: #38b3bb;
+}
+.tabcontent{
+  display: none;
+  transition: 0.5s;
+  width:500px;
+  height:100%;;
+  /*padding:20px;*/
+  background: rgba(#e4e9eb, 0.75); /* Old browsers */
+  background: -moz-linear-gradient(top, #e3e8ea 1%, #acdce0  100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #e3e8ea 1%, #acdce0  100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #e3eaed 1% ,#acdce0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e8ea', endColorstr='#e3eaed',GradientType=0 );
+}
+
+.tabcontent h3{
+  width:100%;
+  height:70px;
+  background:#2d3a49;
+  font-size: 30px;
+  color:#f7f9f9;
+  padding:20px 30px;
+}
+.tabcontent p {
+  padding:20px;
+}
+
+.tabcontent.current {
+  display: block;
+}
+
+.tab-show{
+  /*transform: translateX(-500px);*/
+  /*transition:0.5s;*/
+}
